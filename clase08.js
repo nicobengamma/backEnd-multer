@@ -5,7 +5,6 @@ const routerProducts = require ('./products.router')
 
 const app = express()
 
-
 app.use('/user',routerUser)
 app.use('/prod',routerProducts)
 
