@@ -26,7 +26,7 @@ app.get('/ok', (req, res) => {
     throw 'salto un error'
     res.send('okey, lets go')})
 
-router.get('/ok', (req, res) => {res.send('No te hagas el choro')})
+router.get('/ok', (req, res) => {res.send('no sos admin')})
 router.get('/super', (req, res) => {res.send('Vos si sos el admin prro')})
 
 
