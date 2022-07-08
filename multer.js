@@ -24,6 +24,17 @@ app.post('/uploadFile', upload.single('miArchivo'), (req, res, next) => {
     }
     res.send(file)
 }) 
+app.get('/prod',(req, res) => res.sendFile(__dirname + "/hello/formProductos.html") )
+app.post('/subirProducto', upload.single("mijson") ,(req, res, next) => {
+    const file = req.file
+    if(!file) {
+        const error = new Error('please upload file')
+        error.httpStatusCode = 400
+        return next(error)
+    }
+    res.send(file)
+})
+
 
 app.listen(8080)
 
